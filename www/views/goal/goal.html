@@ -1,10 +1,15 @@
 <ion-view view-title="Goal">
   <ion-content>
-    <p>
-      What do you want to learn?
-    </p>
-    <ion-input class="item-input item">
-
+    <ion-input class="item-input item item-stacked-label">
+      <span>
+        What do you want to learn?
+      </span>
+      <input type="text" placeholder="i.e. cooking, coding, algebra">
     </ion-input>
   </ion-content>
+  <ion-footer-bar class="bar-footer bar-stable bar">
+    <button class="button button-clear pull-right" ui-sref="subgoals">
+      <i>Next</i>
+    </button>
+  </ion-footer-bar>
 </ion-view>

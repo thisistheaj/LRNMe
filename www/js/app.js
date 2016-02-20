@@ -17,7 +17,14 @@ angular.module('LRNMe', ['ionic','LRNMe.controllers'])
       .state('goal', {
         url: '/goal',
         templateUrl: '/views/goal/goal.html',
+      })
+
+      .state('subgoals', {
+        url: '/subgoals',
+        templateUrl: '/views/subgoals/subgoals.html',
       });
+
+
     $urlRouterProvider.otherwise('/login')
   })
 
