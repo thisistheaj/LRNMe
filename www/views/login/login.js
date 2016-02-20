@@ -1,5 +1,6 @@
-angular.module('LRNMe')
 
-  .controller('LoginCtrl', function($scope) {
-    $scope.testVar = "I am Test";
-  })
+angular.module('LRNMe.controllers',[])
+
+.controller('LoginCtrl', function($scope) {
+  $scope.testVar = "I am Test";
+})
