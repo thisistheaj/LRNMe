@@ -1,10 +1,14 @@
 <ion-view view-title="Sub-Goals">
+  <ion-nav-buttons side="right">
+    <button class="button-clear" ng-click="showPopup()">
+      <i class="icon positive ion-android-add"></i>
+    </button>
+  </ion-nav-buttons>
   <ion-content>
-    {{test}}
-    <!--<ion-list>-->
-      <!--<ion-item ng-repeat="item in items">-->
-        <!--{{item}}-->
-      <!--</ion-item>-->
-    <!--</ion-list>-->
+    <ion-list>
+      <ion-item ng-repeat="item in items">
+        {{item}}
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
