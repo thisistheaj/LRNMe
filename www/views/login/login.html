@@ -2,12 +2,12 @@
   <ion-content>
     <ion-list>
         <ion-input class="item-input item">
-          <input type="text" placeholder="username" ng-model="userNameInput">
+          <input type="text" placeholder="username" ng-model="user.userName">
         </ion-input>
         <ion-input class="item-input item">
-          <input type="password" placeholder="password" ng-model="passwordInput">
+          <input type="password" placeholder="password" ng-model="user.password">
         </ion-input>
-        <button class="item button button-block" ui-sref="goals">
+        <button class="item button button-block" ng-click="save()" ui-sref="goals">
           <p>
             Sign in
           </p>

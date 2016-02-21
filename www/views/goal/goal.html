@@ -4,8 +4,10 @@
       <span>
         What do you want to learn?
       </span>
-      <input type="text" placeholder="i.e. cooking, coding, algebra">
+      <input type="text" ng-model="goal.name" placeholder="i.e. cooking, coding, algebra">
     </ion-input>
+    <button class="button button-block" ng-click="add(goal)">add</button>
+    {{goal}}
   </ion-content>
   <ion-footer-bar class="bar-footer bar-balanced bar">
     <button class="button button-clear" ui-sref="goals">

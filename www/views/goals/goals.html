@@ -11,8 +11,8 @@
   </ion-nav-buttons>
   <ion-content>
     <ion-list>
-      <ion-item ui-sref="tasks">
-        Web Development
+      <ion-item ng-repeat="goal in goals" ui-sref="tasks">
+        {{goal.name}}
       </ion-item>
     </ion-list>
 

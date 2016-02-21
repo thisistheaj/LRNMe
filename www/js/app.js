@@ -17,11 +17,13 @@ angular.module('LRNMe', ['ionic'])
       .state('goals', {
         url: '/goals',
         templateUrl: '/views/goals/goals.html',
+        controller: 'GoalsCtrl',
       })
 
       .state('goal', {
         url: '/goal',
         templateUrl: '/views/goal/goal.html',
+        controller: 'GoalCtrl',
       })
 
       .state('subgoals', {
@@ -33,6 +35,7 @@ angular.module('LRNMe', ['ionic'])
       .state('eliminate', {
         url: '/eliminate',
         templateUrl: '/views/eliminate/eliminate.html',
+        controller: 'EliminateCtrl',
       })
 
       .state('task', {

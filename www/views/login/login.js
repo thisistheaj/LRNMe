@@ -1,8 +1,11 @@
 angular.module('LRNMe')
 
-.controller('LoginCtrl', function($scope) {
-  $scope.userNameInput = "";
-  $scope.passwordInput = "";
+.controller('LoginCtrl', function($scope, User) {
+  $scope.user = User.user();
+
+  $scope.save = function() {
+    User.setUser();
+  }
 
 })
   //

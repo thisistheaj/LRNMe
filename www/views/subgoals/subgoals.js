@@ -1,14 +1,14 @@
 angular.module('LRNMe')
 
-  .controller('SubGoalsCtrl', function($scope,$ionicPopup) {
-    $scope.items = [];
+  .controller('SubGoalsCtrl', function($scope,$ionicPopup, Goal) {
+    $scope.goal = Goal.getGoal();
 
-    $scope.addItem = function(item) {
-      $scope.items.push(item);
+    $scope.addItem = function(name) {
+      Goal.addSubgoal(name);
     }
 
-    $scope.removeItem = function(item){
-      $scope.items.splice($scope.items.indexOf(item),1);
+    $scope.removeItem = function(subgoal){
+      $scope.goal.subgoals.splice($scope.goal.subgoals.indexOf(subgoal),1);
     }
 
     $scope.showPopup = function() {
@@ -17,8 +17,8 @@ angular.module('LRNMe')
       // Custom popup
       $ionicPopup.show({
         template: '<input type = "text" ng-model = "data.model">',
-        title: 'Add Item',
-        subTitle: 'What do you need to do?',
+        title: 'Add Subgoal',
+        subTitle: 'List as many as you can!',
         scope: $scope,
 
         buttons: [
