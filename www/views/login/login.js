@@ -1,7 +1,6 @@
 angular.module('LRNMe')
 
 .controller('LoginCtrl', function($scope) {
-  // $scope.testVar = "I am Test";
 
   // this is probably the server booting up when user opens the app
   $scope.ws = new cloudmine.WebService({
@@ -12,7 +11,7 @@ angular.module('LRNMe')
   // user creating an account
   $scope.createAccount = function(){
     // create an object in cloudmine server for the specific user
-    ws.createUser('nduba@nyu.edu', 'kp4iOr23x').on('success', function(data, response) {
+    $scope.ws.createUser('nduba@nyu.edu', 'kp4iOr23x').on('success', function(data, response) {
       console.log(data);
       //{
        //__id__: '52e882fb088747668af4a1670b1d46fb',
@@ -23,7 +22,7 @@ angular.module('LRNMe')
   }
 
   // user logging in with password
-  ws.login('user@example.com', 'brrr212').on('success', function(data, response) {
+  $scope.ws.login('user@example.com', 'brrr212').on('success', function(data, response) {
     console.log(data);
     //    {
     //      expires: 'Fri, 31 Aug 2012 19:08:37 GMT',
@@ -38,7 +37,7 @@ angular.module('LRNMe')
     localStorage.setItem('cm_session', response.session_token);
   });
 
-  ws.login({
+  $scope.ws.login({
     email: "email@example.com",
     username: "username",
     password: "password"
