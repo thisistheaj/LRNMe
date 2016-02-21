@@ -5,11 +5,14 @@ angular.module('LRNMe')
       "one",
       "two",
       "three"
-    ]
+    ];
 
     $scope.addItem = function(item) {
-      items.push(item);
+      $scope.items.push(item);
+    }
 
+    $scope.removeItem = function(item){
+      $scope.items.splice($scope.items.indexOf(item),1)
     }
 
     $scope.showPopup = function() {
