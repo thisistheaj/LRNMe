@@ -1,28 +1,49 @@
-angular.module('LRNMe', [])
+angular.module('LRNMe')
 
-  .factory('Subgoals', function() {
+  .factory('Subgoals', function(GUID) {
     try {
-      var items = angular.fromJson(localStorage.getItem('todos')) || [];
-      todos = items;
+      var items = angular.fromJson(localStorage.getItem('subgoals')) || [];
+      subgoals = items;
     } catch (e) {
-      var todos = [];
+      var subgoals = [
+        "three",
+        "two",
+        "one",
+      ];
     }
 
     function store () {
-      localStorage.setItem('todos', angular.toJson(todos));
+      localStorage.setItem('subgoals', angular.toJson(subgoals));
     }
 
     return {
       all: function() {
-        return todos;
+        return subgoals;
       },
-      remove: function(todo) {
-        todos.splice(todos.indexOf(todo), 1);
+      remove: function(subgoal) {
+        subgoals.splice(subgoals.indexOf(subgoal), 1);
         store();
       },
-      add: function(todo) {
-        todos.push(todo);
+      add: function(subgoal) {
+        subgoals.push(subgoal + GUID.getNext());
         store();
       }
     };
-  });
+  })
+
+.factory('GUID', function() {
+  try {
+    var num = angular.fromJson(localStorage.getItem('i')) || 0;
+    i = num;
+  } catch (e) {
+    var i = 0;
+  }
+
+  return {
+    getNext: function() {
+      i++
+      localStorage.setItem('i', angular.toJson(i));
+      return "" + i;
+    }
+  }
+});

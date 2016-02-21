@@ -1,4 +1,4 @@
-<ion-view view-title="Goal">
+<ion-view view-title="New learning Goal">
   <ion-content>
     <ion-input class="item-input item item-stacked-label">
       <span>
@@ -7,7 +7,10 @@
       <input type="text" placeholder="i.e. cooking, coding, algebra">
     </ion-input>
   </ion-content>
-  <ion-footer-bar class="bar-footer bar-stable bar">
+  <ion-footer-bar class="bar-footer bar-balanced bar">
+    <button class="button button-clear" ui-sref="goals">
+      <i class="icon assertive">Cancel</i>
+    </button>
     <button class="button button-clear pull-right" ui-sref="subgoals">
       <i>Next</i>
     </button>

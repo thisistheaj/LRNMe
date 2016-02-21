@@ -14,6 +14,11 @@ angular.module('LRNMe', ['ionic'])
         controller: 'LoginCtrl'
       })
 
+      .state('goals', {
+        url: '/goals',
+        templateUrl: '/views/goals/goals.html',
+      })
+
       .state('goal', {
         url: '/goal',
         templateUrl: '/views/goal/goal.html',
@@ -24,8 +29,27 @@ angular.module('LRNMe', ['ionic'])
         templateUrl: '/views/subgoals/subgoals.html',
         controller: 'SubGoalsCtrl',
       })
-    ;
 
+      .state('eliminate', {
+        url: '/eliminate',
+        templateUrl: '/views/eliminate/eliminate.html',
+      })
+
+      .state('task', {
+        url: '/task',
+        templateUrl: '/views/task/task.html',
+      })
+
+      .state('buddy', {
+        url: '/buddy',
+        templateUrl: '/views/buddy/buddy.html',
+      })
+
+      .state('tasks', {
+        url: '/tasks',
+        templateUrl: '/views/tasks/tasks.html',
+      })
+    ;
 
     $urlRouterProvider.otherwise('/login')
   })
