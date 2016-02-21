@@ -1,17 +1,18 @@
-<ion-view view-title="Login" hide-back-button="true">
+<ion-view view-title="LRNMe: Learn Anything" hide-back-button="true">
   <ion-content>
-    <button class="button button-block" ui-sref="goals">
-      <p>
-        Login
-      </p>
-    </button>
-
-    <button class="button button-block" ng-click="createAccount()">
-      <p>
-        Create Account
-      </p>
-    </button>
-
+    <ion-list>
+        <ion-input class="item-input item">
+          <input type="text" placeholder="username" ng-model="userNameInput">
+        </ion-input>
+        <ion-input class="item-input item">
+          <input type="password" placeholder="password" ng-model="passwordInput">
+        </ion-input>
+        <button class="item button button-block" ui-sref="goals">
+          <p>
+            Sign in
+          </p>
+        </button>
+    </ion-list>
   </ion-content>
   <ion-footer-bar class="bar-footer bar-balanced bar">
   </ion-footer-bar>

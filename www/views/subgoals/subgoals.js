@@ -1,16 +1,14 @@
 angular.module('LRNMe')
 
-  .controller('SubGoalsCtrl', function($scope,$ionicPopup, Subgoals) {
-    $scope.items = Subgoals.all();
+  .controller('SubGoalsCtrl', function($scope,$ionicPopup) {
+    $scope.items = [];
 
     $scope.addItem = function(item) {
-      //$scope.items.push(item);
-      Subgoals.add(item);
+      $scope.items.push(item);
     }
 
     $scope.removeItem = function(item){
-      //$scope.items.splice($scope.items.indexOf(item),1);
-      Subgoals.remove(item);
+      $scope.items.splice($scope.items.indexOf(item),1);
     }
 
     $scope.showPopup = function() {
