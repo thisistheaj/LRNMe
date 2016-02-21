@@ -4,7 +4,10 @@ angular.module('LRNMe')
     $scope.goal = Goal.getGoal();
 
     $scope.addItem = function(name) {
-      Goal.addSubgoal(name);
+      $scope.goal.subgoals.push({
+        name: name,
+        tasks: []
+      });
     }
 
     $scope.removeItem = function(subgoal){

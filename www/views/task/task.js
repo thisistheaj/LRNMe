@@ -1,6 +1,5 @@
 angular.module('LRNMe')
 
-.controller('GoalCtrl', function ($scope, Goal) {
+.controller('TaskCtrl', function($scope, Goal) {
   $scope.goal = Goal.getGoal();
-
 })

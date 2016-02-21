@@ -47,7 +47,7 @@ angular.module('LRNMe')
         name: "web dev 1",
         subgoals: []
       }];
-    }
+    };
 
     function store () {
       localStorage.setItem('goalsData', angular.toJson(goals));
@@ -57,17 +57,9 @@ angular.module('LRNMe')
       allGoals: function() {
         return goals;
       },
-      addGoal: function(goal) {
-        goals.push(goal)
-        store()
+      addGoal: function() {
+        store();
       },
-      getGoal: function(name) {
-        for (var goal in goals) {
-          if (goal.name === name) {
-            return goal;
-          }
-        }
-      }
     }
   })
 
@@ -78,59 +70,11 @@ angular.module('LRNMe')
     }
 
     return {
-      goal: function(name){
-        goal = {
-          name: name,
-          subgoals: []
-        }
-      },
       getGoal: function(){
         return goal;
-      },
-      addSubgoal: function(name) {
-        goal.subgoals.push({
-          name: name,
-          tasks: []
-        });
-      },
-      removeSubgoal: function(subgoal) {
-        goal.subgoals.splice(goals.indexOf(subgoal),1);
-      },
-      getSubgoal: function(name) {
-        for (var subgoal in goal.subgoals) {
-          if (subgoal.name === name) {
-            return subgoal;
-          }
-        }
       }
     }
   })
-
-  .factory('Subgoals', function () {
-    var subgoals = []
-
-    return {
-      goal: function(name){
-        goal = {
-          name: name,
-          subgoals: []
-        }
-      },
-      getGoal: function(){
-        return goal;
-      },
-      addSubgoal: function(subgoal) {
-        goal.subgoals.push(subgoal);
-      },
-      removeSubgoal: function(subgoal) {
-        goal.subgoals.splice(goals.indexOf(subgoal),1);
-      }
-    }
-  })
-
-
-
-
 
 .factory('GUID', function() {
   try {

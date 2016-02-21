@@ -1,5 +1,18 @@
-<ion-view view-title="New Task">
+<ion-view view-title="Challenges">
   <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="subgoal in goal.subgoals">
+        <h1>{{subgoal.name}}</h1>
+        <ion-input>
+          <span class="input-label">Challenge:</span>
+          <input type="text" placeholder="I will do..." ng-model="subgoal.task.name">
+        </ion-input>
+        <ion-input>
+          <span class="input-label">Frequency:</span>
+          <input type="text" placeholder="For _ days"  ng-model="subgoal.task.days">
+        </ion-input>
+      </ion-item>
+    </ion-list>
 
   </ion-content>
   <ion-footer-bar class="bar-footer bar-balanced bar">

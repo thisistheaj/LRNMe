@@ -1,12 +1,23 @@
 <ion-view view-title="Buddy System">
   <ion-content>
+    <ion-list>
+      <ion-input>
+        <span class="input-label">Add a Buddy:</span>
+        <input type="text" placeholder="buddy@buddyemail.com" ng-model="goal.buddy">
+      </ion-input>
+    </ion-list>
+    <button ng-click="saveGoal()">
+      save
+    </button>
+    {{goal}}
+
 
   </ion-content>
   <ion-footer-bar class="bar-footer bar-balanced bar">
     <button class="button button-clear" ui-sref="goals">
       <i class="icon assertive">Cancel</i>
     </button>
-    <button class="button button-clear pull-right" ui-sref="goals">
+    <button class="button button-clear pull-right" ng-click="saveGoal()" ui-sref="goals">
       <i>Next</i>
     </button>
   </ion-footer-bar>

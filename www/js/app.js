@@ -41,11 +41,13 @@ angular.module('LRNMe', ['ionic'])
       .state('task', {
         url: '/task',
         templateUrl: '/views/task/task.html',
+        controller: 'TaskCtrl',
       })
 
       .state('buddy', {
         url: '/buddy',
         templateUrl: '/views/buddy/buddy.html',
+        controller: 'BuddyCtrl',
       })
 
       .state('tasks', {
