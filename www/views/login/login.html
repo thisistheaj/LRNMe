@@ -1,20 +1,15 @@
 <ion-view view-title="LRNMe: Learn Anything" hide-back-button="true">
   <ion-content>
     <ion-list>
-        <ion-input class="item-input item">
-<!--
-          <input type="text" placeholder="username" ng-model="user.userName">
--->
-          <input type="text" placeholder="username" ng-model="user.userName">
-        </ion-input>
-        <ion-input class="item-input item">
-          <input type="password" placeholder="password" ng-model="user.password">
-        </ion-input>
-        <button class="item button button-block" ng-click="saveAndSend(user.userName,user.password)" ui-sref="goals">
-          <p>
-            Sign in
-          </p>
-        </button>
+      <ion-input class="item-input item">
+        <input type="text" placeholder="username" ng-model="user.userName">
+      </ion-input>
+      <ion-input class="item-input item">
+        <input type="password" placeholder="password" ng-model="user.password">
+      </ion-input>
+      <button class="item button button-block" ui-sref="goals">
+        <p>Sign in</p>
+      </button>
     </ion-list>
   </ion-content>
   <ion-footer-bar class="bar-footer bar-balanced bar">

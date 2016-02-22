@@ -3,13 +3,13 @@ angular.module('LRNMe')
   .factory('User', function() {
     try {
       var user = angular.fromJson(localStorage.getItem('userData')) || {
-          userName: "a",
-          password: "a"
+          userName: "",
+          password: ""
         };
     } catch (e) {
       var user = {
-        userName: "b",
-        password: "b"
+        userName: "",
+        password: ""
       };
     }
 
